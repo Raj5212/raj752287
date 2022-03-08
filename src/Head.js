@@ -17,7 +17,10 @@ const Head = () => {
         <li className="nav-item">
           <NavLink className="nav-link" to="/SignupForm">SignupForm</NavLink>
         </li>
-       
+           
+        <li className="nav-item">
+          <NavLink className="nav-link" to="/LoginForm">LoginForm</NavLink>
+        </li>
       </ul>
     </div>
   </div>
