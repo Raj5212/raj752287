@@ -1,38 +1,450 @@
-.App {
-  text-align: center;
+body {font-family: Arial, Helvetica, sans-serif;}
+* {box-sizing: border-box}
+
+/* Full-width input fields */
+input[type=text], input[type=password] {
+  width: 100%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  display: inline-block;
+  border: none;
+  background: #f1f1f1;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+input[type=text]:focus, input[type=password]:focus {
+  background-color: #ddd;
+  outline: none;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+hr {
+  border: 1px solid #f1f1f1;
+  margin-bottom: 25px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+/* Set a style for all buttons */
+button {
+  background-color: #04AA6D;
   color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  opacity: 0.9;
 }
 
-.App-link {
-  color: #61dafb;
+button:hover {
+  opacity:1;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
+/* Extra styles for the cancel button */
+.cancelbtn {
+  padding: 14px 20px;
+  background-color: #f44336;
+}
+
+/* Float cancel and signup buttons and add an equal width */
+.cancelbtn, .signupbtn {
+  float: left;
+  width: 50%;
+}
+
+/* Add padding to container elements */
+.container {
+  padding: 16px;
+}
+
+/* Clear floats */
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+/* Change styles for cancel button and signup button on extra small screens */
+@media screen and (max-width: 300px) {
+  .cancelbtn, .signupbtn {
+     width: 100%;
   }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* body {
+  background-color: rgb(72, 192, 152);
+  border-radius: 10px;
+  font-family: "Raleway", sans-serif;
+}
+h2 {
+  font-size: 1.2em;
+  font-weight: normal;
+  line-height: 1.6em;
+  color: #4e6ca3;
+  clear: both;
+}
+
+.outer_main {
+  width: 25%;
+  margin: 0 auto;
+  text-align: center;
+  margin-top: 60px;
+}
+select {
+  background-color: #ffffff;
+  background-image: none !important;
+  border: 1px solid #e5e5e5;
+  filter: none !important;
+  min-height: 28px;
+  outline: medium none;
+  width: 220px;
+  padding: 3px;
+}
+.login-logo {
+  background: rgba(107, 156, 53, 0.83);
+  text-align: center;
+  padding: 10px 0;
+}
+.login-wrap {
+  padding: 20px 20px;
+  background-color: cadetblue;
+}
+.form-control {
+  border: 1px solid #eaeaea;
+  box-shadow: none;
+  font-size: 14px;
+  margin-bottom: 15px;
+}
+.select {
+  background-color: #ffffff;
+  background-image: none !important;
+  border: 1px solid #e5e5e5;
+  filter: none !important;
+  min-height: 28px;
+  outline: medium none;
+  width: 220px;
+  padding: 3px;
+}
+.btn-primary {
+  background-color: #3c763d;
+  border-color: rgba(0, 0, 0, 0);
+  color: #ffffff;
+}
+.btn {
+  border-color: #cccccc;
+  border-radius: 0;
+  font-size: 13px;
+  margin-bottom: 5px !important;
+  margin-left: 3px;
+  outline: medium none;
+  padding: 7px 11px;
+}
+.checkbox {
+  color: #b6b6b6;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 300;
+}
+.checkbox {
+  /* display: block; */
+  /* min-height: 20px;
+  padding-left: 20px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  vertical-align: middle;
+}
+.checkbox {
+  margin-bottom: 14px;
+}
+.container {
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+} */
+
+/* .textLeft {
+  text-align: left;
+}
+.loadingDiv {
+  height: 100vh;
+  display: grid;
+  place-items: center;
+}
+.card {
+  width: 400px;
+  border: none;
+  border-radius: 10px;
+  background-color: #fff;
+  margin: auto;
+}
+.image {
+  min-width: 155px;
+  margin-right: 20px;
+}
+.stats {
+  background: #f2f5f8 !important;
+  color: #000 !important;
+}
+.articles {
+  font-size: 10px;
+  color: #a1aab9;
+} */
+/* .number1 {
+  font-weight: 500;
+}
+.followers {
+  font-size: 10px;
+  color: #a1aab9;
+}
+.number2 {
+  font-weight: 500;
+}
+.rating {
+  font-size: 10px;
+  color: #a1aab9;
+}
+.number3 {
+  font-weight: 500;
+/* } */ 
