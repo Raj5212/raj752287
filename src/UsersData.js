@@ -5,7 +5,7 @@ import { useState } from 'react';
 const UserData = () => {
 
 
-    const login = async () => {
+    const User = async () => {
         const data = { email, password }
         await fetch("http://3.38.209.173:5000/api/v1/auth/users", {
             method: "GET",
