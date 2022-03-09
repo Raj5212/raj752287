@@ -20,7 +20,7 @@ const SignupForm = () => {
             },
             body: JSON.stringify(data)
         }).then((resp) => {
-            // console.log("resp",resp);;
+            console.log("resp",resp);;
             resp.json().then((result) => {
                 console.warn("result", result)
             })

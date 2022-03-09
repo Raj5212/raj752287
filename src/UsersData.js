@@ -2,10 +2,7 @@ import React from 'react';
 import Head from './Head';
 import { useState } from 'react';
 
-
-
-
-const LoginForm = () => {
+const UserData = () => {
 
 
     const login = async () => {
@@ -15,7 +12,7 @@ const LoginForm = () => {
             headers: {
                 'Accept': 'application/json',
                 'Content-Type': 'application/json',
-                'x-auth-token': localStorage.token
+                'x-auth-token': localStorage.getItem('token')
             },
             body: JSON.stringify(data)
         }).then((resp) => {
@@ -23,7 +20,7 @@ const LoginForm = () => {
             resp.json().then((result) => {
                 console.warn("result", result);
                 localStorage.setItem('token', result.data.token);
-                var token = getToken(req.headers);
+                var token = getToken(localStorage.getItem('token'));
                 if (token) {
                   Post.create(req.body, function(err, post) {
                     if (err) return next(err);
@@ -45,4 +42,4 @@ const LoginForm = () => {
     );
 };
 
-export default LoginForm;
+export default UserData;
