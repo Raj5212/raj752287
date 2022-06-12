@@ -3,7 +3,7 @@ import React,{useEffect,useState} from 'react'
 function App() {
   const [users,setUser]=useState([])
   useEffect(()=>{
-    fetch("http://localhost:4000/todo")
+    fetch("https://restcountries.com/v3.1/name/India?fullText=true")
     .then((result)=>{result.json()
     .then((resp)=>{setUser(resp)
       })
