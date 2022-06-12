@@ -10,17 +10,18 @@ const GitUser = ({user}) => {
        <tr>
           
           <td>Id</td>
-          <td>User id</td>
-          <td>title</td>
-          <td>body</td>
+          <td>Name</td>
+          <td>Currency</td>
+          <td>Region</td>
+  
         </tr>
         {
           user.map((curElmn,i)=>
             <tr key={i}>
-            <td>{curElmn.id}</td>
-            <td>{curElmn.userId}</td>
-          <td>{curElmn.title}</td>
-            <td>{curElmn.body}</td>
+            <td>{curElmn.Id}</td>
+            <td>{curElmn.Name}</td>
+          <td>{curElmn.Currency}</td>
+            <td>{curElmn.Region}</td>
           </tr>
           )
         }
