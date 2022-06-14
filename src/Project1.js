@@ -1,54 +1,52 @@
-
-import React, { useState } from 'react'
+  import React, { useState } from 'react'
 
 const Project1 = () => {
-const [list,setList]=useState('');
-const [items,setItems]=useState([]);
+const [item ,setItem] = useState('')
+const [data ,setData] = useState([])
 
-
-const item =(e)=>{
-setList(e.target.value)
+const itemE =(e)=>{
+  return(
+    setItem(e.target.value)
+  )
 }
 
-const itemList=()=>{
-    setItems((allitms)=>{
-        return [...allitms,list];
-    });
+const Add_item =()=>{
+  setData((allItms)=>{
+  return[...allItms,item]
+})
+setItem('');
+}
 
-    // console.log(itemList)
-     let cada = [list]
-    // console.log(cada)
-
+const Remove_item=()=>{
+ console.log('delete')
+ setData((allItms)=>{
+  return allItms.filter((arrElmn)=>{
     
-
-    let data = cada.filter((e)=>{
-    console.log(e.charAt(0).toUpperCase()+e.slice(1))
-     return e.charAt(0).toUpperCase()+e.slice(1)
-    })
-    setList('');
-    console.log(data)
+  })
+})
 }
-// console.log(cada)
+
   return (
     <>
-  <h1>Check by the enter value</h1>
-  <input className='inner' type="text" value={list} onChange={item}/>
-  <button onClick={itemList}>Add Item  </button>
+      <div className='inner'>
+        <h1>ToDo App</h1>
+        <div>
+          <input type={"text"} value={item} placeholder={"Enter ToDo Item"} onChange={itemE} />
+          <button className='btn btn-success' onClick={Add_item} >Add Item</button>
+          <button className='btn btn-success' onClick={Remove_item} >Remove Item</button>
+        </div>
 
-  <ol>
-
-  {/* {data} */}
-  {/* {item.map((item,key)=>{ */}
-    {/* return( */}
-        {/* <>
-<div className='todo_style'>
-    <i className='fa fa-items' aria-hidden="true"/>
-</div>
-    <li>{key}  ::  </li>
-    </>
-    )
-  })} */}
-  </ol>
+        <ol>
+          {
+            data.map((curElmn,index)=>{
+              return(
+                
+                <li>{curElmn}</li>
+              )
+            })
+          }
+        </ol>
+      </div>
     </>
   )
 }
